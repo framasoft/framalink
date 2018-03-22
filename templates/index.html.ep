@@ -4,23 +4,25 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h2><%= l('Raccourcir un lien') %></h2>
+            <h2><%= l('Shorten a link') %></h2>
 
 <!-- index.html.ep LSTU -->
 <form class="form" role="form" method="POST" action="<%== url_for 'add' %>">
     <div class="form-group">
         <label class="sr-only" for="lsturl"><%= l('URL to shorten') %></label>
-        <input type="url" name="lsturl" id="lsturl" class="form-control" placeholder="<%= l('URL to shorten') %>" required></input>
+        <input type="url" name="lsturl" id="lsturl" class="form-control" placeholder="<%= l('URL to shorten') %>" required>
     </div>
     <div class="form-group">
         <label class="sr-only" for="lsturl-custom"><%= l('Custom shortened text') %></label>
-        <input type="text" name="lsturl-custom" id="lsturl-custom" class="form-control" placeholder="<%= l('Custom shortened text') %>"></input>
+        <input type="text" name="lsturl-custom" id="lsturl-custom" class="form-control" placeholder="<%= l('Custom shortened text') %>">
     </div>
     <%= submit_button l('Go!'), class => 'btn btn-default btn-primary' %>
+    <%= link_to l('My links') => 'stats' => (class => 'btn btn-default') %>
 </form>
 
 % if (defined(flash('short')) && defined(flash('url'))) {
     <h3 class="alert alert-success form-inline">
+        <img alt="QRCode" src="data:image/png;base64,<%= flash('qrcode') %>">
         <div class="form-group">
             <label><%= link_to flash('url') => begin %><%= flash('url') %><%= end %></a></label>
             <br> → <input id="input-short" value="<%== flash('short') %>" class="form-control">
@@ -65,12 +67,16 @@
     var copyBtn = document.getElementById('clipboard');
 
     copyBtn.addEventListener('click', function(event) {
+        event.preventDefault();
         copyTextToClipboard('<%= flash('short') %>');
     });
 % end
 % }
 % if (defined(flash('msg'))) {
-    <h3 class="alert alert-danger"><%= flash('msg') %><h3>
+    <h3 class="alert alert-danger"><%= flash('msg') %></h3>
+% }
+% if (defined(stash('msg'))) {
+    <h3 class="alert alert-danger"><%= stash('msg') %></h3>
 % }
 <!-- /index.html.ep LSTU -->
 
@@ -79,16 +85,16 @@
     <hr role="presentation" />
     <div class="row">
         <div class="col-md-4" id="tuto-faq">
-            <h2>Prise en main</h2>
+            <h2><%= l('Getting Started') %></h2>
             <p class="text-center" role="presentation"><span class="glyphicon glyphicon-question-sign"></span></p>
             <div id="aboutbox">
-                <p><%== l('<span class="framalink">%1</span> est un service en ligne libre et minimaliste qui permet de raccourcir des liens.', $title) %></p>
+                <p><%== l('<span class="framalink">%1</span> is a free (as in free speech) simple online URL shortener.', $title) %></p>
                 <ol>
-                    <li><%= l('Collez le lien à raccourcir dans le formulaire.') %></li>
-                    <li><%= l('Si besoin, choisissez le texte du lien raccourci.') %></li>
-                    <li><%= l('Partagez ensuite avec vos correspondants le lien qui vous est donné.') %></li>
+                    <li><%= l('Paste a long URL to make it shorter.') %></li>
+                    <li><%= l('If needed, you can choose the text for the shortened link') %></li>
+                    <li><%= l('Next step: share your short link with whoever you wish.') %></li>
                 </ol>
-                <p><%== l('Pour vous aider dans l’utilisation du logiciel, voici <a href="https://framatube.org/media/tutoriel-framalink" data-toggle="modal" onclick="$(\'#TutoVideo\').modal(\'show\'); return false;">un tutoriel vidéo</a> réalisé par <a href="http://arpinux.org/">arpinux</a>, artisan paysagiste de la distribution GNU/Linux pour débutant <a href="https://handylinux.org/">HandyLinux</a>.') %></p>
+                <p><%== l('If you need help to use this program, have a look on <a href="https://framatube.org/media/tutoriel-framalink" data-toggle="modal" onclick="$(\'#TutoVideo\').modal(\'show\'); return false;">this video tutorial</a> courtesy of <a href="http://arpinux.org/">arpinux</a>, a great guide for newcomers on <a href="https://handylinux.org/">HandyLinux</a> GNU/Linux distro.') %></p>
 
     <!-- modale vidéo -->
     <div class="modal fade" id="TutoVideo" tabindex="-1" role="dialog" aria-labelledby="TutoVideoLabel" aria-hidden="true">
@@ -96,16 +102,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Fermer</span></button>
-                    <h1 id="TutoVideoLabel"><%= l('Tutoriel vidéo') %></h1>
+                    <h1 id="TutoVideoLabel"><%= l('Video tutorial') %></h1>
                 </div>
                 <div class="modal-body">
                     <p><video controls="controls" preload="none" poster="https://framatube.org/images/media/990l.jpg" height="340" width="570">
-                        <source src="https://framatube.org/blip/framalink.mp4" type="video/mp4">
-                        <source src="https://framatube.org/blip/framalink.webm" type="video/webm">
+                        <source src="https://old.framatube.org/blip/framalink.mp4" type="video/mp4">
+                        <source src="https://old.framatube.org/blip/framalink.webm" type="video/webm">
                     </video></p>
-                    <p>→ <%= l('La <a href="https://framatube.org/blip/framalink.webm">vidéo au format webm</a>') %></p>
+                    <p>→ <%== l('Watch <a href="https://old.framatube.org/blip/framalink.webm">the webm video</a>') %></p>
                </div>
-               <div class="modal-footer"><a href="#" class="btn btn-default" data-dismiss="modal"><%= l('Fermer') %></a></div>
+               <div class="modal-footer"><a href="#" class="btn btn-default" data-dismiss="modal"><%= l('Close') %></a></div>
            </div>
         </div>
     </div>
@@ -114,19 +120,22 @@
         </div>
 
         <div class="col-md-4" id="le-logiciel">
-            <h2>Le logiciel</h2>
+            <h2><%= l('The software') %></h2>
             <p class="text-center" role="presentation"><span class="glyphicon glyphicon-cloud"></span></p>
-            <p><%== l('<span class="framalink">%1</span> est une instance du logiciel <a href="https://lstu.fr"><abbr>LSTU</abbr></a> développé par <a href="http://www.fiat-tux.fr/">Luc Didry</a>.', $title) %></p>
-            <p><%== l('<abbr>LSTU</abbr> est sous licence <a href="http://www.wtfpl.net/"><abbr title="Do What The Fuck you want to Public License" lang="en">WTFPL</abbr></a>.') %></p>
-            <p><%== l('<span class="framalink">%1</span> dispose d’<a href="/api">une <abbr title="Application Programming Interface" lang="en">API</abbr> pour raccourcir rapidement un lien</a>.', $title) %></p>
-            <p><%== l('Vous pouvez consulter vos liens passés en vous rendant sur la <a href="%1">page de statistiques</a> (fonctionne avec des cookies, donc valable uniquement avec le navigateur utilisé pour raccourcir vos liens).', url_for('stats')) %></p>
+            <p>
+                <%== l('<span class="framalink">%1</span> is derived from <a href="https://lstu.fr"><abbr>Lstu</abbr></a> created and maintained by <a href="https://fiat-tux.fr/">Luc Didry</a>.', $title) %>
+                <a href="https://liberapay.com/sky" title="<%= l('Support the author on Liberapay') %>" class="btn btn-soutenir btn-xs" style="margin-left: 5px;"><img id="liberapay-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAABqUlEQVQ4jY2SP4sUQRDFn5p5nMEJGogYiF9AFMU/mIihBuonMBNFI6MDLzDXxEQzweQMFARRozs40UAQkwNFDI/FYcHZXWa6a6brZ2DPMMip21DJ63pVr16VlF8TuJAiTz3ytQ1c1LzPjXU3cKM04+hcpLJkySPf3MAjn2Yz9s9FbCpOuTHOxBd//iN2bEtsjWtuuBspRZYlKQSONDVn28jVZNxMgRtN4DwFi5Kk1VV2JeNBns+amnOSlKV7xoexxogFFQWLA2OCJDU1Z9xIGav7+XOkyBNNp+xzY5LB95KUIstdtzZyRZKoOeTGz76BVZwcVLqTZb7MWGEVJyRpNGLBI68z7kqRux2RwOHJhL0e+Zwd3qRkSZLGY/a4sdZ5MVz8VJLMOOZGkbG3nfP1b6mzjH+UGz9y9S+S1EYu99IDtyWpqjjgkecd3kYuyY2y0+2RN8l4OHDwnUeeeWRzUOyxsoP3BomFR15ts7uexBa7+8tJgeturOdDmGbpW25suPEhBR41Faf/erNmHB9Uv/XfI+87G/f71VQcnJvoke+ZOFpZYee/cn8BK+FRWdUll/MAAAAASUVORK5CYII=" alt="<%= l('Liberapay button') %>"></a>
+            </p>
+            <p><%== l('<abbr>Lstu</abbr> is licensed under the terms of the <a href="http://www.wtfpl.net/"><abbr title="Do What The Fuck you want to Public License" lang="en">WTFPL</abbr></a>.') %></p>
+            <p><%== l('<span class="framalink">%1</span> provides <a href="/api">an <abbr title="Application Programming Interface" lang="en">API</abbr> to shorten your links quite easily</a>.', $title) %></p>
+            <p><%== l('You can see a list of you past links on the <a href="%1">statistics page</a> (it works with cookies, so it will work only with the browser you use to shorten your links).', url_for('stats')) %></p>
         </div>
 
         <div class="col-md-4" id="jardin">
-            <h2><%= l('Cultivez votre jardin') %></h2>
+            <h2><%= l('Grown your own') %></h2>
             <p class="text-center" role="presentation"><span class="glyphicon glyphicon-tree-deciduous"></span></p>
-            <p><%== l('Pour participer au développement du logiciel, proposer des améliorations ou simplement le télécharger, rendez-vous sur <a href="https://framagit.org/luc/lstu">le site de développement</a>.') %></p>
-            <p><%= l('Si vous souhaitez installer ce logiciel pour votre propre usage et ainsi gagner en autonomie, nous vous aidons sur :') %></p>
-            <p class="text-center"><a href="http://framacloud.org/cultiver-son-jardin/installation-de-lstu/" class="btn btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> framacloud.org</a></p>
+            <p><%== l('If you want to contribute on development, suggest improvements and patches, or simply download, hop on <a href="https://framagit.org/luc/lstu">Development site</a>.') %></p>
+            <p><%= l('If you want to install this software for you own usage, we help you on:') %></p>
+            <p class="text-center"><a href="https://framacloud.org/fr/cultiver-son-jardin/lstu.html" class="btn btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> framacloud.org</a></p>
         </div>
     </div>
