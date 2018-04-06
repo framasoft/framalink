@@ -128,11 +128,11 @@
             </p>
             <p><%== l('<abbr>Lstu</abbr> is licensed under the terms of the <a href="http://www.wtfpl.net/"><abbr title="Do What The Fuck you want to Public License" lang="en">WTFPL</abbr></a>.') %></p>
             <p><%== l('<span class="framalink">%1</span> provides <a href="/api">an <abbr title="Application Programming Interface" lang="en">API</abbr> to shorten your links quite easily</a>.', $title) %></p>
-            <p><%== l('You can see a list of you past links on the <a href="%1">statistics page</a> (it works with cookies, so it will work only with the browser you use to shorten your links).', url_for('stats')) %></p>
+            <p><%== l('You can see a list of your past links on the <a href="%1">statistics page</a> (it works with cookies, so it will work only with the browser you use to shorten your links).', url_for('stats')) %></p>
         </div>
 
         <div class="col-md-4" id="jardin">
-            <h2><%= l('Grown your own') %></h2>
+            <h2><%= l('Grow your own') %></h2>
             <p class="text-center" role="presentation"><span class="glyphicon glyphicon-tree-deciduous"></span></p>
             <p><%== l('If you want to contribute on development, suggest improvements and patches, or simply download, hop on <a href="https://framagit.org/luc/lstu">Development site</a>.') %></p>
             <p><%= l('If you want to install this software for you own usage, we help you on:') %></p>

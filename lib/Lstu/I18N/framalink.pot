@@ -43,7 +43,7 @@ msgid "Getting Started"
 msgstr ""
 
 #: templates/index.html.ep:135
-msgid "Grown your own"
+msgid "Grow your own"
 msgstr ""
 
 #: templates/index.html.ep:94
@@ -104,7 +104,7 @@ msgstr ""
 
 #. (url_for('stats')
 #: templates/index.html.ep:131
-msgid "You can see a list of you past links on the <a href=\"%1\">statistics page</a> (it works with cookies, so it will work only with the browser you use to shorten your links)."
+msgid "You can see a list of your past links on the <a href=\"%1\">statistics page</a> (it works with cookies, so it will work only with the browser you use to shorten your links)."
 msgstr ""
 
 #: templates/layouts/default.html.ep:24
