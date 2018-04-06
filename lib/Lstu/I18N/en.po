@@ -64,7 +64,7 @@ msgstr "Getting Started"
 
 #: templates/index.html.ep:135
 msgid "Grown your own"
-msgstr "Grown your own"
+msgstr "Grow your own"
 
 #: templates/index.html.ep:94
 msgid "If needed, you can choose the text for the shortened link"
@@ -153,7 +153,7 @@ msgid ""
 "a> (it works with cookies, so it will work only with the browser you use to "
 "shorten your links)."
 msgstr ""
-"You can see a list of you past links on the <a href=\"%1\">statistics page</"
+"You can see a list of your past links on the <a href=\"%1\">statistics page</"
 "a> (it works with cookies, so it will work only with the browser you use to "
 "shorten your links)."
 
