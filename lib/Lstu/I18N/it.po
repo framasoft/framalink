@@ -1,6 +1,4 @@
-# Luc Didry <luc@framasoft.org>, 2018. #zanata
-# Moira Brülisauer <moosline@gmail.com>, 2018. #zanata
-# tom ngr <tom.ngr@zaclys.net>, 2018. #zanata
+# Paolo Mauri <paolo@paolomauri.it>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -8,10 +6,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-18 08:06+0000\n"
-"Last-Translator: Moira Brülisauer <moosline@gmail.com>\n"
-"Language-Team: German\n"
-"Language: de\n"
+"PO-Revision-Date: 2018-05-21 09:17+0000\n"
+"Last-Translator: Paolo Mauri <paolo@paolomauri.it>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
 "X-Generator: Zanata 4.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
@@ -21,9 +19,9 @@ msgid ""
 "wtfpl.net/\"><abbr title=\"Do What The Fuck you want to Public License\" "
 "lang=\"en\">WTFPL</abbr></a>."
 msgstr ""
-"<abbr>Lstu</abbr> ist unter den Lizenzbedingungen von <a href=\"http://www."
-"wtfpl.net/\"><abbr title=\"Do What The Fuck you want to Public License\" "
-"lang=\"en\">WTFPL</abbr></a> lizensiert. "
+"<abbr>Lstu</abbr> è rilasciato  secondo la licenza<a href=\"http://www.wtfpl."
+"net/\"><abbr title=\"Do What The Fuck you want to Public License\" lang="
+"\"en\">WTFPL</abbr></a>."
 
 #. ($title)
 #: templates/index.html.ep:91
@@ -31,8 +29,8 @@ msgid ""
 "<span class=\"framalink\">%1</span> is a free (as in free speech) simple "
 "online URL shortener."
 msgstr ""
-"<span class=\"framalink\">%1</span> ist ein freier (wie in Redefreiheit) "
-"minimaler online URL-Shortener."
+"<span class=\"framalink\">%1</span> è un semplice accorciatore online di URL "
+"libero (come libertà di parola)"
 
 #. ($title)
 #: templates/index.html.ep:126
@@ -41,9 +39,9 @@ msgid ""
 "fr\"><abbr>Lstu</abbr></a> created and maintained by <a href=\"https://fiat-"
 "tux.fr/\">Luc Didry</a>."
 msgstr ""
-"<span class=\"framalink\">%1</span> ist ein Derivat von <a href=\"https://"
-"lstu.fr\"><abbr>Lstu</abbr></a> (dérivé), das von <a href=\"https://fiat-tux."
-"fr/\">Luc Didry</a> entwickled und gemaintained wird."
+"<span class=\"framalink\">%1</span> deriva da <a href=\"https://lstu."
+"fr\"><abbr>Lstu</abbr></a> creato e mantenuto da <a href=\"https://fiat-tux."
+"fr/\">Luc Didry</a>."
 
 #. ($title)
 #: templates/index.html.ep:130
@@ -52,25 +50,25 @@ msgid ""
 "\"Application Programming Interface\" lang=\"en\">API</abbr> to shorten your "
 "links quite easily</a>."
 msgstr ""
-"<span class=\"framalink\">%1</span> hat <a href=\"/api\">eine <abbr title="
-"\"Application Programming Interface\" lang=\"en\">API</abbr> um Ihre links "
-"einfach zu verkürzen</a>."
+"<span class=\"framalink\">%1</span> fornisce <a href=\"/api\">delle <abbr "
+"title=\"Application Programming Interface\" lang=\"en\">API</abbr> per "
+"abbreviare abbastanza facilmente i tuoi link </a>."
 
 #: templates/index.html.ep:114
 msgid "Close"
-msgstr "Schliessen"
+msgstr "Chiudi"
 
 #: templates/index.html.ep:88
 msgid "Getting Started"
-msgstr "Erste Schritte"
+msgstr "Guida introduttiva"
 
 #: templates/index.html.ep:135
 msgid "Grow your own"
-msgstr "Bestellen Sie ihren Garten"
+msgstr "Coltiva il tuo giardino"
 
 #: templates/index.html.ep:94
 msgid "If needed, you can choose the text for the shortened link"
-msgstr "Sie können den Text vom verkürzenen Link wählen"
+msgstr "Se è necessario, puoi scegliere il testo per il link abbreviato"
 
 #: templates/index.html.ep:97
 msgid ""
@@ -81,12 +79,12 @@ msgid ""
 "newcomers on <a href=\"https://handylinux.org/\">HandyLinux</a> GNU/Linux "
 "distro."
 msgstr ""
-"Brauchen Sie Hilfe, um dieses Dienst zu benutzen ? Sehen Sie <a href=\"https:"
-"//framatube.org/media/tutoriel-framalink\" data-toggle=\"modal\" onclick="
-"\"$('#TutoVideo').modal('show'); return false;\">dieses video Tutorial</a> "
-"an ! Erzeugung von <a href=\"http://arpinux.org/\">arpinux</a>, ein gutes "
-"Handbuch für Anfänger auf eine <a href=\"https://handylinux.org/"
-"\">HandyLinux</a> GNU/Linux distro."
+"Se hai bisogno di aiuto per questo programma, guarda <a href=\"https://"
+"framatube.org/media/tutoriel-framalink\" data-toggle=\"modal\" onclick="
+"\"$('#TutoVideo').modal('show'); return false;\">questo video tutorial</a> "
+"concesso gentilmente da <a href=\"http://arpinux.org/\">arpinux</a>, una "
+"valida guida per i nuovi arrivati di <a href=\"https://handylinux.org/"
+"\">HandyLinux</a> una distribuzione GNU/Linux."
 
 #: templates/index.html.ep:137
 msgid ""
@@ -94,61 +92,58 @@ msgid ""
 "or simply download, hop on <a href=\"https://framagit.org/luc/"
 "lstu\">Development site</a>."
 msgstr ""
-"Um an der Entwicklung teilzunehmen, Patches oder Verbesserungen "
-"vorzuschlagen, oder einfach zu downloaden, gehen Sie zur <a href=\"https://"
-"framagit.org/luc/lstu\">Entwicklungseite</a>."
+"Se vuoi contribuire allo sviluppo, suggerire miglioramenti e patches, o "
+"semplicemente scaricare il programma, vai al <a href=\"https://framagit.org/"
+"luc/lstu\">sito di sviluppo</a>."
 
 #: templates/index.html.ep:138
 msgid ""
 "If you want to install this software for you own usage, we help you on:"
-msgstr ""
-"Wollen Sie dieses Software zur eigenen Verwendung installieren, helfen wir "
-"Ihnen auf :"
+msgstr "Se vuoi installare questo software per uso personale, ti aiutiamo su:"
 
 #: templates/index.html.ep:127
 msgid "Liberapay button"
-msgstr "Liberapay Button"
+msgstr "Bottone Liberapay"
 
 #: templates/index.html.ep:20
 msgid "My links"
-msgstr "Meine Links"
+msgstr "I miei links"
 
 #: templates/index.html.ep:95
 msgid "Next step: share your short link with whoever you wish."
-msgstr ""
-"Nächster Schritt : Teilen Sie den verkürzten Link mit wem immer Sie wollen."
+msgstr "Prossimo step: condividi il tuo link accorciato con chi vuoi."
 
 #: templates/index.html.ep:93
 msgid "Paste a long URL to make it shorter."
-msgstr "Länge URL einfügen, um zu verkürzen."
+msgstr "Incolla l'URL lungo per crearne uno abbreviato."
 
 #: templates/index.html.ep:7
 msgid "Shorten a link"
-msgstr "Ein Link verkürzen"
+msgstr "Abbreviare un link"
 
 #: templates/layouts/default.html.ep:20
 msgid "Shorten your URLs"
-msgstr "Ihre URLs verkürzen"
+msgstr "Abbrevia i tuoi URL"
 
 #: templates/index.html.ep:127
 msgid "Support the author on Liberapay"
-msgstr "Den Autor auf LiberaPay unterstützen"
+msgstr "Sostieni l'autore con Liberapay"
 
 #: templates/index.html.ep:123
 msgid "The software"
-msgstr "Die Software"
+msgstr "Il programma"
 
 #: templates/index.html.ep:105
 msgid "Video tutorial"
-msgstr "Video Tutorial"
+msgstr "Video tutorial"
 
 #: templates/index.html.ep:112
 msgid ""
 "Watch <a href=\"https://old.framatube.org/blip/framalink.webm\">the webm "
 "video</a>"
 msgstr ""
-"Die <a href=\"https://old.framatube.org/blip/framalink.webm\">webm video</a> "
-"ansehen"
+"Guarda <a href=\"https://old.framatube.org/blip/framalink.webm\">il video "
+"webm</a>"
 
 #. (url_for('stats')
 #: templates/index.html.ep:131
@@ -157,10 +152,10 @@ msgid ""
 "a> (it works with cookies, so it will work only with the browser you use to "
 "shorten your links)."
 msgstr ""
-"Sie Können eine Liste von Ihre vergangenen Links auf die <a href="
-"\"%1\">Statistiken Webseite</a> (Es funktionniert nur mit dem Web-browser, "
-"der Sie für URL-verkürzung benutzen haben, denn es Cookies braucht.)"
+"Puoi vedere l'elenco dei link incollati nella <a href=\"%1\">pagina delle "
+"statistiche</a> (funziona con i cookies, quindi funzionerà solo con il "
+"browser che hai usato per abbreviare i tuoi link)."
 
 #: templates/layouts/default.html.ep:24
 msgid "Your precious URL shortener"
-msgstr "Dein lieber URL-verkürzer"
+msgstr "Il tuo prezioso URL abbreviato"
